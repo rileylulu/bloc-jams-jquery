@@ -50,7 +50,7 @@ class Player {
 
   prettyTime (timeInSeconds) {
     const M = Math.floor(timeInSeconds / 60);
-    const SS = Math.floor(timeInSeconds- (M*60));
+    const SS = Number(timeInSeconds % 60/100).toFixed(2).substring(2);
     return M+ ":" +SS;
   }
 }
